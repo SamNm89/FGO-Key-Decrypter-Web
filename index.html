@@ -48,8 +48,8 @@
 
         .card {
             background: var(--glass-bg);
-            backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
             border: 1px solid var(--glass-border);
             border-radius: 24px;
             padding: 3rem 2rem;
@@ -68,6 +68,7 @@
             margin-bottom: 0.5rem;
             background: linear-gradient(to right, #818cf8, #c084fc);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -177,6 +178,13 @@
             display: none;
         }
 
+        .file-feedback {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+            display: none;
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -220,8 +228,7 @@
                 <div class="upload-hint">or click to browse</div>
             </div>
 
-            <div id="file-name" style="margin-bottom: 1.5rem; color: var(--primary); font-weight: 600; display: none;">
-            </div>
+            <div id="file-name" class="file-feedback"></div>
 
             <button class="btn" id="download-btn">Download .txt Report</button>
 
